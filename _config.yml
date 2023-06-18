@@ -19,3 +19,12 @@ mermaid:
   enable: true
   # Available themes: default | dark | forest | neutral
   theme: default
+
+# hexo-renderer-pandoc
+pandoc:
+  args:
+    - '-f'
+    - 'markdown'
+    - '-t'
+    - 'html'
+    - '--mathjax'
