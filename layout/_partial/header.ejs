@@ -3,24 +3,13 @@
     <nav class="flex items-center text-base">
       <a href="<%- config.root %>" class="group">
         <h2 class="font-medium tracking-tighterp text-l p-2">
-          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo" src="<%- theme.logo %>" alt="<%- config.title %>" />
           <%= config.title %>
         </h2>
       </a>
-      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
-        <%- page.title %>
-      </div>
       <div class="flex-1"></div>
       <div class="flex items-center gap-3">
         <% for (var i in theme.nav){ %>
           <a class="hidden sm:flex" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
-        <% } %>
-        <% if (theme.links !== undefined) { %>
-          <% for (var key in theme.links) { %>
-            <a class="w-5 h-5 hidden sm:flex" title="<%- key %>" href="<%= theme.links[key] %>">
-              <iconify-icon width="20" icon="ri:<%- key.toLowerCase() %>-line"></iconify-icon>
-            </a>
-          <% } %>
         <% } %>
         <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
           <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>

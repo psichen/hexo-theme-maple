@@ -1,6 +1,4 @@
 <meta charset="UTF-8">
-<%- partial('_plugins/google-analytics') %>
-<%- partial('_plugins/baidu-analytics') %>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <% if(config.author){ %>
@@ -18,16 +16,9 @@
 <%
 var title = page.title;
 if (is_archive()) {
-  title = __('archive_a');
-  if (is_month()) {
-    title += ': ' + page.year + '/' + page.month;
-  } else if (is_year()) {
-    title += ': ' + page.year;
-  }
-} else if (is_category()) {
-  title = __('category') + ': ' + page.category;
+  title = __('Archive');
 } else if (is_tag()) {
-  title = __('tag') + ': ' + page.tag;
+  title = __('Tags') + ': ' + page.tag;
 }
 %>
 <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
@@ -37,14 +28,9 @@ if (is_archive()) {
 <link rel="icon" href="<%- url_for(theme.favicon) %>">
 <% } %>
 
-<%- css('css/main') %>
 <%- css('lib/nprogress/nprogress.css') %>
-
 <%- js('lib/jquery.min.js') %>
 <%- js('lib/iconify-icon.min.js') %>
-
 <%- partial('_plugins/tailwindcss') %>
 <%- partial('_plugins/nprogress') %>
 <%- partial('_plugins/theme') %>
-
-

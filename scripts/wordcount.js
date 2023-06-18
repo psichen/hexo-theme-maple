@@ -14,15 +14,6 @@ var counter = function (content) {
   return [cn, en];
 };
 
-hexo.extend.helper.register(
-  "min2read",
-  function (content, { cn = 300, en = 160 } = {}) {
-    var len = counter(content);
-    var readingTime = len[0] / cn + len[1] / en;
-    return readingTime < 1 ? "1" : parseInt(readingTime, 10);
-  }
-);
-
 hexo.extend.helper.register("wordcount", function (content) {
   var len = counter(content);
   var count = len[0] + len[1];

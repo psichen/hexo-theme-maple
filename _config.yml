@@ -1,27 +1,11 @@
 # Header
 nav:
-  Posts: /archives
+  Archives: /archives
   # Categories: /category
-  # Tags: /tag
+  Tags: /tag
+  About: /about
 
-# favicon
-favicon: /favicon.png
-
-# logo
-logo: /images/logo.svg
-
-# links
-links:
-  Github: https://github.com/xbmlz
-  # ZhiHu:
-  # Twitter:
-  # Weibo:
-
-# analytics
-google_analytics:
-baidu_analytics:
-
-# mathjax
+# fancybox
 fancybox: true
 
 # mathjax
@@ -30,29 +14,8 @@ mathjax: true
 # echarts
 echarts: true
 
-# busuanzi
-busuanzi: true
-
 # mermaid
 mermaid:
   enable: true
   # Available themes: default | dark | forest | neutral
   theme: default
-
-# giscus
-giscus:
-  enable:
-  repo:
-  repo_id:
-  category:
-  category_id:
-  mapping:
-
-# maple
-maple:
-  enable: true
-  # fall leaf count
-  count: 10
-  # 0-1
-  speed: 0.5
-
