@@ -1,0 +1,26 @@
+<section class="px-6 max-w-prose mx-auto gap-2 grid grid-cols-1">
+  <% var last_year = ''; %>
+  <% page.posts.each(function (post) { %>
+    <% var cur_year = post.date.year(); %>
+    <% if(last_year !== cur_year){ %>
+      <div class="relative pointer-events-none">
+        <span class="text-5xl opacity-10 font-bold"><%- cur_year %></span>
+      </div>
+    <% last_year = cur_year; } %>
+    <div>
+    <span class="grid grid-cols-[1fr_5fr]">
+    <span class="text-gray-400">
+    <%- date(post.date, 'MMM DD') %>
+    </span>
+    <span>
+    <a href="<%- url_for(post.path) %>">
+      <%- post.title %>
+    </a>
+    </span>
+    </span>
+    </div>
+
+  <% }) %>
+</section>
+
+<%- partial('_partial/paginator') %>

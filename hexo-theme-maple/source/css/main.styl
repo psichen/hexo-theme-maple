@@ -1,0 +1,47 @@
+@import 'highlight.styl'
+
+ol
+  list-style: decimal
+
+.tagcloud-0 {
+  padding-right:15px
+  color: #9CA3AF
+}
+
+.tagcloud-1 {
+  padding-right:15px
+  color: #6B7280
+}
+
+.tagcloud-2 {
+  padding-right:15px
+  color: #4B5563
+}
+
+:root {
+  --c-bg: #ffffff
+  --c-scrollbar: #d9d9d9
+  --c-scrollbar-hover: #bbbbbb
+}
+
+html.dark
+  --c-bg: #212121
+  --c-scrollbar: #333333
+  --c-scrollbar-hover: #555555
+
+a:hover
+  color: #41c4de
+  cursor: pointer
+
+::-webkit-scrollbar-track
+  background-color: var(--c-bg);
+
+
+::-webkit-scrollbar
+  width: 6px;
+  height: 6px;
+
+
+::-webkit-scrollbar-thumb
+    background-color: var(--c-scroll);
+    border-radius: 4px;
