@@ -27,7 +27,7 @@
       <% if (post.excerpt) { %>
       <%- post.excerpt %>
       <% } %>
-      <p class="line-clamp-4 mt-3">
+      <p class="line-clamp-none mt-3">
       <iconify-icon icon="ant-design:calendar-twotone"></iconify-icon>
       <%- date(post.date, 'MMM DD') %>
       <% post.tags.each(tag =>{ %>
